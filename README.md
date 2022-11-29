@@ -1,4 +1,4 @@
-Install using the repository-------------------------------------------------------------------------------------------------------
+Install using the repository------------------------------
 
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
@@ -19,7 +19,7 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 
-Install Docker Engine---------------------------------------------------------------------------------------------------------------
+Install Docker Engine-----------------------
 sudo apt-get update
 If there is error type 
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
@@ -29,12 +29,12 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 sudo docker run hello-world
 
-UnInstall Docker Engine--------------------------------------------------------------------------------------------------------------
+UnInstall Docker Engine----------------------
 sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo rm -rf /var/lib/docker
 sudo rm -rf /var/lib/containerd
  
-Post-installation steps for Linux----------------------------------------------------------------------------------------------------
+Post-installation steps for Linux----------------------
 Manage Docker as a non-root user
 sudo groupadd docker
 sudo chmod -aG docker $USER
@@ -46,7 +46,7 @@ sudo systemctl enable containerd.service
 sudo systemctl disable docker.service
 sudo systemctl disable containerd.service
 
-Docker Images------------------------------------------------------------------------------------------------------------------------- 
+Docker Images--------------------------
 
 docker images
 
@@ -62,7 +62,7 @@ Docker HELP
 docker run - -help 
 docker - -version
 
-Docker Containers----------------------------------------------------------------------------------------------------------------------
+Docker Containers----------------------------------
 docker run -it repository:version   #run container with interattch mode
 docker run -it repository:version whoami  #direct command to container 
 docker run --name HtetAung -it repository:version  #name to container & run 
@@ -80,7 +80,7 @@ Docker Commit
 docker commit -a htetaung -m “Message” <ID>  <imagename>      #container to images 
 
 
-DockerFile-------------------------------------------------------------------------------------------------------------------------------
+DockerFile----------------------------------
 Useful Dockerfile Commands
 
 FROM     
