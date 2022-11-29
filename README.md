@@ -1,14 +1,4 @@
-# Foobar
-
-Foobar is a Python library for dealing with word pluralization.
-
-
-```bash
-pip install foobar
-```
-
-
-
+#Docker Installation on Ubuntu Linux
 # Install using the repository
 
 ```bash
