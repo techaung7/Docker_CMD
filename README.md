@@ -100,7 +100,8 @@ docker stop repository:version
 docker rm repository
 docker ps                                           #show running containers
 docker ps -a                                        #show all containers
-Docker Commit
+
+#Docker Commit
 docker commit -a htetaung -m “Message” <ID>  <imagename>     #container to images 
 ```
 
