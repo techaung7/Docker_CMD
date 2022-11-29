@@ -91,17 +91,17 @@ docker run -it repository:version                  #run container with interattc
 docker run -it repository:version whoami           #direct command to container 
 docker run --name HtetAung -it repository:version  #name to container & run 
 
-docker run  -it  -name HtetAung  -p80:80 -p143:143 repository:version #port open & run 
+docker run -it --name HtetAung -p80:80 -p143:143 repository:version       #port open & run 
 
-docker run -d -it repository:version  #background run    
-docker exec -it <ID> bash   #relogin to container
-docker stats <ID>  #show info of containers
+docker run -d -it repository:version                #background run    
+docker exec -it <ID> bash                           #relogin to container
+docker stats <ID>                                   #show info of containers
 docker stop repository:version 
 docker rm repository
-docker ps         #show running containers
-docker ps -a     #show all containers
+docker ps                                           #show running containers
+docker ps -a                                        #show all containers
 Docker Commit
-docker commit -a htetaung -m “Message” <ID>  <imagename>      #container to images 
+docker commit -a htetaung -m “Message” <ID>  <imagename>     #container to images 
 ```
 
 # DockerFile (Useful Dockerfile Commands)
