@@ -43,13 +43,18 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo docker run hello-world
 ```
 
-# UnInstall Docker Engine:
+# UnInstall Docker Engine
+
+```bash
 sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo rm -rf /var/lib/docker
 sudo rm -rf /var/lib/containerd
+```
  
 # Post-installation steps for Linux
+
 Manage Docker as a non-root user
+```bash
 sudo groupadd docker
 sudo chmod -aG docker $USER
 newgrp docker
@@ -59,8 +64,9 @@ sudo systemctl enable containerd.service
 
 sudo systemctl disable docker.service
 sudo systemctl disable containerd.service
-
+```
 # Docker Images 
+```bash
 docker images
 
 docker pull repository:version      #pull image from docker hub 
@@ -71,13 +77,14 @@ docker inspect ubuntu:latest         #show stats of images
 docker rmi <images ID>              #delete image
 docker images -q                   #show images only ID
 docker rmi $(docker images -q) -f       #delete all images 
-
+```
 # Docker Help 
-    
+```bash    
 docker run - -help 
 docker - -version
-
+```
 # Docker Containers
+```bash
 docker run -it repository:version   #run container with interattch mode
 docker run -it repository:version whoami  #direct command to container 
 docker run --name HtetAung -it repository:version  #name to container & run 
@@ -93,7 +100,7 @@ docker ps         #show running containers
 docker ps -a     #show all containers
 Docker Commit
 docker commit -a htetaung -m “Message” <ID>  <imagename>      #container to images 
-
+```
 
 # DockerFile (Useful Dockerfile Commands)
 
@@ -110,7 +117,7 @@ USER
 VOLUME
 
 
-
+```bash
 docker build -t  <name> .             #Build Image with Dockerfile
 
 
@@ -118,5 +125,5 @@ Docker Push
 docker login     
 docker tag <imageID>  username/imagename
 docker push username/imagename
-
+```
 
