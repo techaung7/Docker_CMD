@@ -34,7 +34,8 @@ echo \
 # Install Docker Engine
 ```bash
 sudo apt-get update
-If there is error type 
+
+#If there is error type 
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 
@@ -58,7 +59,8 @@ Manage Docker as a non-root user
 sudo groupadd docker
 sudo chmod -aG docker $USER
 newgrp docker
-Configure Docker to start on boot with systemd
+
+#Configure Docker to start on boot with systemd
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
@@ -69,14 +71,14 @@ sudo systemctl disable containerd.service
 ```bash
 docker images
 
-docker pull repository:version      #pull image from docker hub 
+docker pull repository:version     #pull image from docker hub 
 docker pull ubuntu:latest           
 
-docker inspect ubuntu:latest         #show stats of images
+docker inspect ubuntu:latest       #show stats of images
 
-docker rmi <images ID>              #delete image
+docker rmi <images ID>             #delete image
 docker images -q                   #show images only ID
-docker rmi $(docker images -q) -f       #delete all images 
+docker rmi $(docker images -q) -f  #delete all images 
 ```
 # Docker Help 
 ```bash    
@@ -85,8 +87,8 @@ docker - -version
 ```
 # Docker Containers
 ```bash
-docker run -it repository:version   #run container with interattch mode
-docker run -it repository:version whoami  #direct command to container 
+docker run -it repository:version                  #run container with interattch mode
+docker run -it repository:version whoami           #direct command to container 
 docker run --name HtetAung -it repository:version  #name to container & run 
 
 docker run  -it  -name HtetAung  -p80:80 -p143:143 repository:version #port open & run 
@@ -119,9 +121,10 @@ VOLUME
 
 ```bash
 docker build -t  <name> .             #Build Image with Dockerfile
+```
 
-
-Docker Push
+# Docker Push
+```bash
 docker login     
 docker tag <imageID>  username/imagename
 docker push username/imagename
