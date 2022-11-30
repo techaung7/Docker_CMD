@@ -125,6 +125,9 @@ docker push username/imagename
 ```bash
 docker nerwork create <Network Name>
 docker network ls 
+docker network connect <Network Name> <Container Name>
+docker network disconnect <Network Name> <Container Name>
+docker network rm <Network Name> 
+
+
 ```
-
-
