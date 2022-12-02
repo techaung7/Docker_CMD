@@ -153,7 +153,11 @@ docker swarm join-token manager         #Show Manager Token
 ```
 # Docker Swarm Mode (services)
 ```bash 
-docker service create --name <NAME> -p 8080:8080 --replicas <5> <Image Name>      #RUN Application From Manager  
+docker service create --name <NAME> -p 8080:8080 --replicas <5> <Image Name>      #RUN Application From Manager
+
+#RUN Application From Manager with Overlay Network 
+docker service create --name <NAME> -p 8080:8080 --replicas <5> --network <Overlay Network Name> <Image Name>  
+
 docker service ls                
 docker service ps <NAME>
 docker service rm
