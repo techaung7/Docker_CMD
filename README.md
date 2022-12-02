@@ -129,5 +129,11 @@ docker network connect <Network Name> <Container Name>
 docker network disconnect <Network Name> <Container Name>
 docker network rm <Network Name> 
 
+#Host Network
+```bash
+docker run --rm -d --network host --name <my_nginx> <nginx>
+ip a|grep ens                 #Check IP of Container
+
+
 
 ```
