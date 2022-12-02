@@ -129,7 +129,6 @@ docker network ls
 docker network connect <Network Name> <Container Name>
 docker network disconnect <Network Name> <Container Name>
 docker network rm <Network Name> 
-docker run -d --network <host> --name <Container Name> <Image Name>
 
 #Host Network (Within A Host)
 docker run --rm -d --network host --name <my_nginx> <nginx>
