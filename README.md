@@ -123,6 +123,7 @@ docker push username/imagename
 # Docker Nerwork
 
 ```bash
+#Bridge Network 
 docker nerwork create <Network Name>
 docker network ls 
 docker network connect <Network Name> <Container Name>
@@ -130,15 +131,14 @@ docker network disconnect <Network Name> <Container Name>
 docker network rm <Network Name> 
 docker run -d --network <host> --name <Container Name> <Image Name>
 
-#Host Network
-
+#Host Network (Within A Host)
 docker run --rm -d --network host --name <my_nginx> <nginx>
 ip a|grep ens                 #Check IP of host
 
-#Overlay Network 
-docker swarm init          #initialize docker swarm 
+#Overlay Network (HOST A to Host B)
+docker swarm init          #initialize docker swarm /wll get tocken 
 docker network create --driver=overlay --attachable <NetworkName>
-
+docker swarm join --tocken <TOEKN ID>
 
 
 
