@@ -139,6 +139,18 @@ docker swarm init          #initialize docker swarm /wll get tocken
 docker network create --driver=overlay --attachable <NetworkName>
 docker swarm join --tocken <TOEKN ID>
 docker swarm leave --force
-
+```
+# Docker Swarm 
+```bash
+docker swarm init                              #Manager 
+docker swarm join --tocken <TOEKN ID>          #Join As Worker
+docker swarm leave --force
+docker swarm init --advertise-addr <IP>:2377 --listen-addr <IP>:2377
+docker node ls
+docker swarm join-token worker          #Show Worker Token
+docker swarm join-token manager         #Show Manager Token
+docker service create --name <NAME> -p 8080:8080 --replicas 5 <Image Name>
+docker service ls 
+docker service ps <NAME>
 
 ```
