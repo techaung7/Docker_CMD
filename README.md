@@ -138,7 +138,7 @@ ip a|grep ens                 #Check IP of host
 docker swarm init          #initialize docker swarm /wll get tocken 
 docker network create --driver=overlay --attachable <NetworkName>
 docker swarm join --tocken <TOEKN ID>
-
+docker swarm leave --force
 
 
 ```
