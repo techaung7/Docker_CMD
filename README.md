@@ -161,6 +161,11 @@ docker service create --name <NAME> -p 8080:8080 --replicas <5> --network <Overl
 docker service ls                
 docker service ps <NAME>
 docker service rm
-docker service scale <NAME>=<10>             #Scale to <10> containers
+
+#Scale to <10> containers
+docker service scale <NAME>=<10>    
+
+#Rolling Update
+docker service update --image <Update IMAGE NAME> --update-parallelism 2 --update-delay 20s <OLD Name>  
 
 ```
