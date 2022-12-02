@@ -128,11 +128,17 @@ docker network ls
 docker network connect <Network Name> <Container Name>
 docker network disconnect <Network Name> <Container Name>
 docker network rm <Network Name> 
+docker run -d --network <host> --name <Container Name> <Image Name>
 
 #Host Network
-```bash
+
 docker run --rm -d --network host --name <my_nginx> <nginx>
-ip a|grep ens                 #Check IP of Container
+ip a|grep ens                 #Check IP of host
+
+#Overlay Network 
+docker swarm init          #initialize docker swarm 
+docker network create --driver=overlay --attachable <NetworkName>
+
 
 
 
