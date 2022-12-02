@@ -149,8 +149,11 @@ docker swarm init --advertise-addr <IP>:2377 --listen-addr <IP>:2377
 docker node ls
 docker swarm join-token worker          #Show Worker Token
 docker swarm join-token manager         #Show Manager Token
-docker service create --name <NAME> -p 8080:8080 --replicas 5 <Image Name>
-docker service ls 
-docker service ps <NAME>
 
+```
+# Docker Swarm Mode (services)
+```bash 
+docker service create --name <NAME> -p 8080:8080 --replicas <5> <Image Name>      #RUN Application From Manager  
+docker service ls                
+docker service ps <NAME>           
 ```
