@@ -143,7 +143,7 @@ docker swarm leave --force
 # Docker Swarm 
 ```bash
 docker swarm init                              #Manager 
-docker swarm join --tocken <TOEKN ID>          #Join As Worker
+docker swarm join --token <TOEKN ID>          #Join As Worker
 docker swarm leave --force
 docker swarm init --advertise-addr <IP>:2377 --listen-addr <IP>:2377
 docker node ls
